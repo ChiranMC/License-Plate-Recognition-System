@@ -1,6 +1,6 @@
 # Computer Vision Coursework [Part-B]
 # License Plate Recognition with YOLOv8 + OCR  
-
+This project was made for the completion of my computer vision module on my campus 
 This project implements **License Plate Recognition (LPR)** using **YOLOv8** for plate detection and **EasyOCR** for character recognition. It supports **training custom models**, **evaluating performance**, and running inference on **images, video files, or live webcam streams**.  
 
 ---
