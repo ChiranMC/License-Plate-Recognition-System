@@ -5,7 +5,7 @@ This project implements **License Plate Recognition (LPR)** using **YOLOv8** for
 
 ---
 
-## 📦 Installation  
+## Installation  
 
 Clone the repository and install dependencies:  
 
@@ -15,7 +15,7 @@ pip install ultralytics opencv-python matplotlib lxml easyocr scikit-learn
 
 ---
 
-## 📂 Dataset Preparation  
+## Dataset Preparation  
 
 1. Place your dataset in the following structure:  
 ```
@@ -40,7 +40,7 @@ val/
 
 ---
 
-## 🚀 Training  
+## Training  
 
 Train two YOLOv8 models for comparison:  
 
@@ -75,16 +75,16 @@ print("mAP@0.5:0.95:", metrics_n.box.map)
 
 ---
 
-## 🔍 Inference  
+## Inference  
 
-### 1️⃣ On Images  
+### On Images  
 ```python
 results = model.predict(source="final_test_data/image_test_footage/test_image.png", show=True, save=True)
 ```
 
 ---
 
-### 2️⃣ On Video Files  
+### On Video Files  
 ```python
 video_path = "final_test_data/video_test_footage/video_test_footage_1.mp4"
 results = model.predict(source=video_path, show=True, save=True)
@@ -92,7 +92,7 @@ results = model.predict(source=video_path, show=True, save=True)
 
 ---
 
-### 3️⃣ On Live Webcam + OCR  
+### On Live Webcam + OCR  
 The system detects plates using YOLOv8, preprocesses them (grayscale, blur, threshold), and extracts text with **EasyOCR**.  
 A majority-vote mechanism smooths noisy OCR results.  
 
@@ -110,7 +110,7 @@ This will:
 
 ---
 
-## 🏆 Results  
+## Results  
 
 YOLOv8n (Nano) performed better than YOLOv8s (Small) in this dataset:  
 
@@ -121,11 +121,11 @@ YOLOv8n (Nano) performed better than YOLOv8s (Small) in this dataset:
 
 ---
 
-## 📌 Features  
+## Features  
 
-- ✅ Automatic dataset conversion (VOC → YOLO)  
-- ✅ Custom YOLOv8 training (Nano & Small models)  
-- ✅ Model evaluation with P, R, F1, mAP  
-- ✅ Inference on images, video, and live webcam  
-- ✅ OCR integration with **EasyOCR** + preprocessing (grayscale, blur, threshold)  
-- ✅ Noisy predictions handled with majority-vote smoothing  
+-  Automatic dataset conversion (VOC → YOLO)  
+-  Custom YOLOv8 training (Nano & Small models)  
+-  Model evaluation with P, R, F1, mAP  
+-  Inference on images, video, and live webcam  
+-  OCR integration with **EasyOCR** + preprocessing (grayscale, blur, threshold)  
+-  Noisy predictions handled with majority-vote smoothing  
