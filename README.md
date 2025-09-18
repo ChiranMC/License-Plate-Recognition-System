@@ -58,7 +58,7 @@ model_s.train(data="data.yaml", epochs=20, imgsz=640, name="lpr_yolov8s")
 
 ---
 
-## 📊 Evaluation  
+## Evaluation  
 
 Evaluate trained models and extract metrics:  
 
